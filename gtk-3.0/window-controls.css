@@ -52,7 +52,7 @@ NemoWindow .frame {
     background-image: url("../assets/win7-maximize.png");
 }
 .titlebutton.close {
-    background: url("assets/window/DWMWindow_CloseButtonGlowImage.png");
+    background-image: url("assets/window/DWMWindow_CloseButtonGlowImage.png");
     background-image: url("../assets/win7-close.png");
 }
 
