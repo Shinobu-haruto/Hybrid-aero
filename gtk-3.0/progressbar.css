@@ -1,0 +1,63 @@
+/* ============================================================
+   WINDOWS 7 / VISTA PROGRESSBAR — REAL GTK3 IMPLEMENTATION
+   ============================================================ */
+
+progressbar,
+.progressbar {
+    min-height: 14px;
+    padding: 1px 1px 1px 1px;
+    min-with: 19px;
+    background: transparent;
+}
+
+/* === TROUGH (el fondo del progress bar) === */
+progressbar trough,
+.progressbar trough {
+    background-image: url("assets/progressbar/Progress_BarImage.png");
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: auto;
+    border: none;
+    border-image: url("assets/progressbar/Progress_BarImage.png");
+    box-shadow: none;
+    border-image-slice: 9 9 7 6 fill;
+    padding: 1px 1px 1px 1px;
+    min-height: 14px;
+    background-color: transparent;
+}
+
+/* === FILL (la barra verde que avanza) === */
+progressbar trough progress,
+.progressbar trough progress {
+    background-image: url("assets/progressbar/Progress_BarImage.png");
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: auto;
+    min-height: 14px;
+    border: none;
+    margin: 0;
+    padding: 1px 1px 1px 1px;
+    color: rgb(82, 215, 99);
+    border-image-slice: 9 9 7 6 fill;
+    border-width: 1px;
+}
+
+/* === OVERLAY MOVEDIZO (las líneas diagonales animadas) === */
+progressbar trough progress:dir(ltr),
+.progressbar trough progress:dir(ltr) {
+    animation: aero-progress-move 1s linear infinite;
+    background-image: url("assets/progressbar/Progress_MoveOverlayImage.png"),
+                      url("assets/progressbar/Progress_ChunkImage.png");
+    background-repeat: repeat-x;
+    background-position: 0 center, center;
+    background-size: auto 100%, auto 100%;
+    min-height: 14px;
+    border-image-slice: 0 0 6 5 fill;
+}
+
+/* === Animación del overlay (Windows 7 auténtica) === */
+@keyframes aero-progress-move {
+    from { background-position: 0px center, center; }
+    to   { background-position: 32px center, center; }
+}
+

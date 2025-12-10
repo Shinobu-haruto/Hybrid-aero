@@ -1,0 +1,44 @@
+/* Barra superior con overlays reales */
+headerbar {
+    min-height: 32px;
+    background:
+        url("assets/window/DWMWindow_FrameTopDesignLeft_ActiveImage");
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    background-position: left top, right top, left top;
+    background-size: auto, auto, contain;
+    margin-top: 397, 0, 1199, 604;
+    border-bottom: 1px solid rgba(255,255,255,0.35);
+    margin: 9, 0, 0, 0;
+}
+
+/* Ventana inactiva */
+window:backdrop headerbar {
+    background-image:
+        url("assets/window/DWMWindow_FrameTop_InactiveImage.png");
+}
+
+/* Reflejos laterales simulados */
+window > box {
+    box-shadow:
+        inset 12px 0 0 rgba(255,255,255,0.04),
+        inset -12px 0 0 rgba(255,255,255,0.04),
+        inset 0 -12px 0 rgba(255,255,255,0.04);
+}
+
+header:active {
+    background-image:url("assets/window/DWMWindow_FrameTop_ActiveImage.png");
+    background-position: left top, right top, left top;
+    background-size: auto, auto, contain;
+    border-bottom: 1px solid rgba(255,255,255,0.35);
+    margin: 9, 0, 0, 0;
+}
+
+menubar.menubar {
+ -GtkWidget-window-dragging: true;
+  padding: 0;
+  background-image:url("assets/window/Default__Rebar_BackgroundImage.png);
+    background-position: left top, right top, left top;
+    background-size: auto, auto, contain;
+    border-bottom: 1px solid rgba(255,255,255,0.35);
+    margin: 9, 0, 0, 0;
+}

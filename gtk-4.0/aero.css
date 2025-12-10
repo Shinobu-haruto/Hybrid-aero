@@ -1,0 +1,156 @@
+/* Interfaz Aero "HybridAero"*/
+
+* {
+  background-clip: padding-box;
+  -GtkToolButton-icon-spacing: 0;
+  -GtkTextView-error-underline-color: #D93025;
+  -GtkScrolledWindow-scrollbar-spacing: 0;
+  -GtkToolItemGroup-expander-size: 11;
+  -GtkWidget-text-handle-width: 24;
+  -GtkWidget-text-handle-height: 24;
+  -GtkDialog-button-spacing: 6;
+  -GtkDialog-action-area-border: 6;
+  outline-style: solid;
+  outline-width: 2px;
+  outline-color: transparent;
+  outline-offset: -4px;
+  -gtk-outline-radius: 2px;
+  -gtk-secondary-caret-color: #1A73E8;
+}
+
+*:focus {
+  outline-color: alpha(currentColor, 0.1);
+}
+
+
+
+/* ==============================
+   GTK4 - Window Reflections
+   ============================== */
+headerbar {
+min-height: 151px;
+    border-image-source:
+        url("assets/window/DWMWindow_Overlay_TopLeft.png"),
+        url("assets/window/DWMWindow_Overlay_TopRight.png"),
+        url("assets/window/DWMWindow_Reflections_TopImage.png");
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    background-position: left top, right top, left top;
+    background-size: auto, auto, contain;
+    margin-top: 397, 0, 1199, 604;
+    border-bottom: 1px solid rgba(255,255,255,0.35);
+}
+
+/* ==========================================================
+   DWM Reflection alrededor con borde blanco (GTK 3)
+   ========================================================== */
+.background {
+ background-color: @aero-accent-bg;
+ }
+ 
+/* ========================================
+   Efecto DWM Aero SOLO para Nemo (Cinnamon)
+   ======================================== */
+
+NemoWindow {
+    background-color: transparent;
+
+    /* Marco estilo Windows 7 */
+    box-shadow:
+        0 0 0 12px white,
+        0 0 0 20px rgba(0,0,0,0.15),
+        0 0 24px rgba(0,0,0,0.35);
+
+    border-radius: 10px;
+
+    /* Reflejo Aero */
+    background-image: url("assets/window/DWMWindow_ReflectionsImage.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+
+    /* No mezclar fondo con contenido interno */
+    background-clip: padding-box;
+}
+
+/* Interior limpio */
+NemoWindow .view,
+NemoWindow .sidebar,
+NemoWindow .toolbar,
+NemoWindow .frame {
+    background-color: inherit;
+}
+
+window {
+    background-color: transparent;
+    background:
+        url("assets/window/DWMWindow_Overlay_TopLeft.png"),
+        url("assets/window/DWMWindow_Overlay_TopRight.png"),
+        url("assets/window/DWMWindow_Reflections_TopImage.png");
+
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    background-position: left top, right top, left top;
+    background-size: auto, auto, contain;
+    margin-top: 397, 0, 1199, 604;
+    border-bottom: 1px solid rgba(255,255,255,0.35);
+}
+ /* ===================================================
+   Windows 7 Aero - Push Buttons (full state mapping)
+   =================================================== */
+
+button {
+    background-color: transparent;
+    border-image-source: url("assets/buttons/Button_PushButton_NormalImage.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    border-image-slice: 4 4 4 4 fill;
+    border: none;
+    border-radius: 0;
+    padding: 4px 8px;
+    border-width: 5px;
+    border-image-repeat: stretch;
+    min-height: 22px;
+    min-width: 23px;
+    color: #000000;
+    text-shadow: 0 1px rgba(255,255,255,0.6);
+    box-shadow: none;
+}
+
+/* Hover (Hot) */
+button:hover {
+    border-image-source: url("assets/buttons/Button_PushButton_HotImage.png");
+    border-image-slice: 4 4 4 4 fill;
+    padding: 4px 8px;
+    border-width: 5px;
+    border-image-repeat: stretch;
+}
+
+/* Pressed */
+button:active {
+    border-image-source: url("assets/buttons/Button_PushButton_PressedImage.png");
+    padding-left: 13px;
+    padding-top: 5px;
+    padding: 4px 8px;
+    border-width: 5px;
+    border-image-repeat: stretch;
+    border-image-slice: 4 4 4 4 fill;
+}
+
+/* Disabled */
+button:disabled {
+    border-image-source: url("assets/buttons/Button_PushButton_DisabledImage.png");
+    padding: 4px 8px;
+    border-width: 5px;
+    border-image-repeat: stretch;
+    color: #7f7f7f;
+    text-shadow: none;
+    border-image-slice: 4 4 4 4 fill;
+}
+
+/* Default button (focus / Enter) */
+button.default,
+button:focus {
+    background-image: url("assets/buttons/Button_PushButton_DefaultedImage.png");
+    border-image-slice: 4 4 4 4 fill;
+}
+

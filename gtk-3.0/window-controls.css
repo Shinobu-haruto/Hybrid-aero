@@ -1,0 +1,58 @@
+/* ==========================================================
+   DWM Reflection alrededor con borde blanco (GTK 3)
+   ========================================================== */
+.background {
+ background-color: white;
+ }
+ 
+/* ========================================
+   Efecto DWM Aero SOLO para Nemo (Cinnamon)
+   ======================================== */
+
+NemoWindow {
+    background-color: transparent;
+
+    /* Marco estilo Windows 7 */
+    box-shadow:
+        0 0 0 12px white,
+        0 0 0 20px rgba(0,0,0,0.15),
+        0 0 24px rgba(0,0,0,0.35);
+
+    border-radius: 10px;
+
+    /* Reflejo Aero */
+    background-image: url("assets/window/DWMWindow_ReflectionsImage.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+
+    /* No mezclar fondo con contenido interno */
+    background-clip: padding-box;
+}
+
+/* Interior limpio */
+NemoWindow .view,
+NemoWindow .sidebar,
+NemoWindow .toolbar,
+NemoWindow .frame {
+    background-color: inherit;
+}
+
+
+.titlebutton {
+    border-radius: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.titlebutton.minimize {
+    background-image: url("../assets/win7-minimize.png");
+}
+.titlebutton.maximize {
+    background-image: url("../assets/win7-maximize.png");
+}
+.titlebutton.close {
+    background: url("assets/window/DWMWindow_CloseButtonGlowImage.png");
+    background-image: url("../assets/win7-close.png");
+}
+

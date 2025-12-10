@@ -1,0 +1,29 @@
+/* =================================
+   Windows 7 Aero Color Palette
+   ================================= */
+
+@define-color aero_active_caption #2B579A;
+@define-color aero_inactive_caption #A7C6ED;
+@define-color aero_highlight #3399FF;
+@define-color aero_window_bg #F0F0F0;
+@define-color aero_text #000000;
+@define-color aero_button_face #E1E1E1;
+@define-color aero_button_text #000000;
+
+/* Aplicación global */
+window {
+    background-color: @aero_window_bg;
+    color: @aero_text;
+}
+
+/* Barra de título */
+headerbar {
+    color: white;
+}
+
+/* Selección estilo Windows */
+*:selected {
+    background-color: @aero_highlight;
+    color: white;
+}
+

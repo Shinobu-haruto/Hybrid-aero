@@ -1,0 +1,18 @@
+/* =============================
+   TOOLBAR WINDOWS 7
+   ============================= */
+
+.nemo-window toolbar,
+toolbar {
+    background-color: @win7-toolbar;
+    border-bottom: 1px solid @win7-border;
+    box-shadow: inset 0 1px 0 #ffffff;
+    padding: 4px;
+}
+
+.nemo-window toolbar button {
+    background: linear-gradient(#ffffff, #dcdcdc);
+    border: 1px solid #a0a0a0;
+    border-radius: 3px;
+}
+

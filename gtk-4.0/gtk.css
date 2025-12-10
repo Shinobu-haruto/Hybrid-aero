@@ -1,0 +1,24 @@
+/* Linux–Windows Style Wrapper (LSW) */
+@import url("resource:///org/gtk/libgtk/theme/Adwaita/gtk.css");
+:root {
+  --accent: #0078D7;
+  --bg: #121212;
+  --fg: #ffffff;
+  /* ==============================
+   Windows 7 Fonts (Segoe UI port)
+   ============================== */
+
+* {
+    font-family: "Segoe UI", "Cantarell", sans-serif;
+    font-size: 9pt;
+}
+
+@define-color aero-accent-bg #ffffff;
+@define-color win-accent-dark #2b78ff;
+@define-color win-accent-light #9fd0ff;
+
+@import url("aero.css");
+@import url("window.css");
+@import url("headerbar.css");
+@import url("toolbar.css");
+@import url("progressbar.style);
