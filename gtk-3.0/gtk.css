@@ -1,11 +1,11 @@
-/* Linux–Windows Style Wrapper (LSW) */
+/* Se requiere Parchar la transparencia con herramientas linux */
 @import url("resource:///org/gtk/libgtk/theme/Adwaita/gtk.css");
 :root {
   --accent: #0078D7;
   --bg: #121212;
   --fg: #ffffff;
   /* ==============================
-   Windows 7 Fonts (Segoe UI port)
+    Fonts Base
    ============================== */
 
 * {
