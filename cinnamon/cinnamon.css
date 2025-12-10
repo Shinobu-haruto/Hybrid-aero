@@ -8,7 +8,7 @@
 
 /* Panel principal */
 #panel {
-    background-color: @win-accent;
+    background-color: rgba(255, 255, 255, 0.4);
     background-gradient-direction: vertical;
     background-gradient-start: @win-accent-light;
     background-gradient-end: @win-accent-dark;
