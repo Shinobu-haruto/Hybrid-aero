@@ -1,7 +1,8 @@
 /* Barra superior con overlays reales */
 headerbar {
     min-height: 32px;
-    background:
+    background-color: rgba(255,255,255,0.5);
+    background-image:
         url("assets/window/DWMWindow_FrameTopDesignLeft_ActiveImage");
     background-repeat: no-repeat, no-repeat, repeat-x;
     background-position: left top, right top, left top;

@@ -1,29 +1,14 @@
-/* =================================
-   Windows 7 Aero Color Palette
-   ================================= */
+/* Light blue inspired */
+@define-color win7_button_top #f6fbff;
+@define-color win7_button_mid #e2eef9;
+@define-color win7_button_bottom #c9def3;
 
-@define-color aero_active_caption #2B579A;
-@define-color aero_inactive_caption #A7C6ED;
-@define-color aero_highlight #3399FF;
-@define-color aero_window_bg #F0F0F0;
-@define-color aero_text #000000;
-@define-color aero_button_face #E1E1E1;
-@define-color aero_button_text #000000;
+/* Hover stronger highlight */
+@define-color win7_button_hover #d8ebff;
 
-/* Aplicación global */
-window {
-    background-color: @aero_window_bg;
-    color: @aero_text;
-}
+/* Pressed */
+@define-color win7_button_pressed #b4d1f2;
 
-/* Barra de título */
-headerbar {
-    color: white;
-}
-
-/* Selección estilo Windows */
-*:selected {
-    background-color: @aero_highlight;
-    color: white;
-}
+/* Border */
+@define-color win7_button_border #8aa6c5;
 

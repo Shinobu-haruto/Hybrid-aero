@@ -1,56 +1,28 @@
-button button.text-button:dir(ltr) label:dir(ltr) {
-    border-image-source: url("assets/buttons/Button_PushButton_NormalImage.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
-    border-image-slice: 4 4 4 4 fill;
-    border: none;
-    border-radius: 0;
-    padding: 3px;
-    border-width: 5px;
-    border-image-repeat: stretch;
-    min-height: 22px;
-    min-width: 23px;
-    color: #000000;
-    text-shadow: 0 1px rgba(255,255,255,0.6);
-    box-shadow: none;
+button {
+    border-radius: 4px;
+    border: 1px solid @win7_button_border;
+    padding: 4px 10px;
+    background-image: linear-gradient(
+        to bottom,
+        @win7_button_top,
+        @win7_button_mid 50%,
+        @win7_button_bottom
+    );
+    color: #1a1a1a;
 }
-
-/* Hover (Hot) */
 button:hover {
-    border-image-source: url("assets/buttons/Button_PushButton_HotImage.png");
-    border-image-slice: 4 4 4 4 fill;
-    padding: 3px;
-    border-width: 5px;
-    border-image-repeat: stretch;
+    background-image: linear-gradient(
+        to bottom,
+        white,
+        @win7_button_hover
+    );
 }
-
-/* Pressed */
 button:active {
-    border-image-source: url("assets/buttons/Button_PushButton_PressedImage.png");
-    padding-left: 13px;
-    padding-top: 5px;
-    padding: 3px;
-    border-width: 5px;
-    border-image-repeat: stretch;
-    border-image-slice: 4 4 4 4 fill;
-}
-
-/* Disabled */
-button:disabled {
-    border-image-source: url("assets/buttons/Button_PushButton_DisabledImage.png");
-    padding: 4px 8px;
-    border-width: 5px;
-    border-image-repeat: stretch;
-    color: #7f7f7f;
-    text-shadow: none;
-    border-image-slice: 4 4 4 4 fill;
-}
-
-/* Default button (focus / Enter) */
-button.default,
-button:focus {
-    background-image: url("assets/buttons/Button_PushButton_DefaultedImage.png");
-    border-image-slice: 4 4 4 4 fill;
+    background-image: linear-gradient(
+        to bottom,
+        @win7_button_pressed,
+        @win7_button_mid
+    );
+    border-color: darken(@win7_button_border, 10%);
 }
 
