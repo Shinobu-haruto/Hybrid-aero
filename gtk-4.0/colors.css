@@ -1,0 +1,14 @@
+/* Light blue inspired */
+@define-color win7_button_top #f6fbff;
+@define-color win7_button_mid #e2eef9;
+@define-color win7_button_bottom #c9def3;
+
+/* Hover stronger highlight */
+@define-color win7_button_hover #d8ebff;
+
+/* Pressed */
+@define-color win7_button_pressed #b4d1f2;
+
+/* Border */
+@define-color win7_button_border #8aa6c5;
+
