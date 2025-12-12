@@ -22,7 +22,7 @@ Un tema inspirado en **Windows 7 / Vista Aero** recreado para **GTK 3, GTK 4 y C
 - **Cinnamon** (panel, menú, applets)
 
 --- Preview
-<img alt="<texto-alt>" src="<preview-theme>">
+![preview_theme.png](https://github.com/Shinobu-haruto/Hybrid-aero/blob/main/preview_theme.png)">
 
 ## 📁 Estructura del tema
 ```
