@@ -21,7 +21,8 @@ Un tema inspirado en **Windows 7 / Vista Aero** recreado para **GTK 3, GTK 4 y C
 - **GTK 4.0** (adaptado)
 - **Cinnamon** (panel, menú, applets)
 
----
+--- Preview
+<img alt="<texto-alt>" src="<preview-theme>">
 
 ## 📁 Estructura del tema
 ```
