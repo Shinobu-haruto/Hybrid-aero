@@ -1,4 +1,4 @@
-/* Barra superior con overlays reales */
+/* Caption Active*/
 headerbar {
     min-height: 32px;
     background-color: rgba(255,255,255,0.5);
@@ -12,10 +12,9 @@ headerbar {
     margin: 9, 0, 0, 0;
 }
 
-/* Ventana inactiva */
+/* Caption Inactive */
 window:backdrop headerbar {
-    background-image:
-        url("assets/window/DWMWindow_FrameTop_InactiveImage.png");
+    background-image: rgba(255, 255, 255, 0.7);
 }
 
 /* Reflejos laterales simulados */
