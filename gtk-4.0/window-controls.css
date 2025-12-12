@@ -1,0 +1,331 @@
+/* ==========================================================
+   DWM Reflection alrededor con borde blanco (GTK 3)
+   ========================================================== */
+.background {
+ background-color: white;
+ }
+ 
+/* ========================================
+   Efecto DWM Aero SOLO para Nemo (Cinnamon)
+   ======================================== */
+
+NemoWindow {
+    background-color: transparent;
+
+    /* Marco estilo Windows 7 */
+    box-shadow:
+        0 0 0 12px white,
+        0 0 0 20px rgba(0,0,0,0.15),
+        0 0 24px rgba(0,0,0,0.35);
+
+    border-radius: 10px;
+
+    /* Reflejo Aero */
+    background-image: url("assets/window/DWMWindow_ReflectionsImage.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+
+    /* No mezclar fondo con contenido interno */
+    background-clip: padding-box;
+}
+
+/* Interior limpio */
+NemoWindow .view,
+NemoWindow .sidebar,
+NemoWindow .toolbar,
+NemoWindow .frame {
+    background-color: inherit;
+}
+
+
+.titlebutton {
+    border-radius: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.titlebutton.minimize {
+    background-image: url("../assets/win7-minimize.png");
+}
+.titlebutton.maximize {
+    background-image: url("../assets/win7-maximize.png");
+}
+.titlebutton.close {
+    background: url("assets/window/DWMWindow_CloseButtonGlowImage.png");
+    background-image: url("../assets/win7-close.png");
+}
+
+checkbutton {
+    padding: 4px;
+}
+
+checkbutton > check {
+    border-radius: 3px;
+    border: 1px solid #7b9ebd;
+    background: linear-gradient(to bottom, #ffffff, #e8f1fb);
+    min-width: 14px;
+    min-height: 14px;
+}
+
+checkbutton:checked > check {
+    background: linear-gradient(to bottom, #d9ecff, #a4c9f6);
+    border-color: #4b8ad1;
+    color: #0a4ea3;
+}
+scrollbar slider {
+    border-radius: 6px;
+    background-image: linear-gradient(
+        to bottom,
+        var(--win7-blue-light),
+        var(--win7-blue-mid)
+    );
+    border: 1px solid var(--win7-border);
+}
+
+spinner {
+    min-width: 16px;
+    min-height: 16px;
+    animation: win7_spinner 1s linear infinite;
+}
+
+@keyframes win7_spinner {
+    0% { -gtk-icon-transform: rotate(0deg); }
+    100% { -gtk-icon-transform: rotate(360deg); }
+}
+
+spinner:checked {
+    color: #4b8ad1; /* azul Win7 */
+}
+
+scale slider {
+    min-width: 14px;
+    min-height: 22px;
+    border-radius: 4px;
+    border: 1px solid #88a8c7;
+    background-image: linear-gradient(
+        to bottom,
+        #ffffff,
+        #dce8f6,
+        #b7cee8
+    );
+}
+
+scale slider:hover {
+    background-image: linear-gradient(
+        to bottom,
+        #ffffff,
+        #e8f3ff
+    );
+    border-color: #4b8ad1;
+}
+
+scrollbar slider {
+    background: linear-gradient(to bottom, #f5f9fc, #dbe7f4);
+    border: 1px solid #9db6cc;
+    border-radius: 3px;
+    min-width: 14px;
+}
+
+switch {
+    min-width: 38px;
+    min-height: 18px;
+
+    border-radius: 20px;
+    border: 1px solid rgba(0,0,0,0.25);
+
+    background-image: linear-gradient(
+        to bottom,
+        #f0f0f0,
+        #dcdcdc
+    );
+
+    transition: background 200ms ease, border 200ms ease;
+}
+
+switch:checked {
+    background-image: linear-gradient(
+        to bottom,
+        #5fe77f,
+        #2fbf5a
+    ); /* Verde inspirado Aero */
+    border-color: #1a8e3c;
+}
+
+switch slider {
+    min-width: 16px;
+    min-height: 16px;
+   
+    border-radius: 16px;
+
+    background-image: linear-gradient(
+        to bottom,
+        #ffffff,
+        ##4db84d
+    );
+
+    border: 1px solid rgba(0,0,0,0.25);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.35);
+
+    transition: margin 180ms ease;
+}
+
+switch:checked slider {
+    margin-left: 2px;
+}
+
+switch:hover {
+    box-shadow: 0 0 4px rgba(255,255,255,0.8) inset,
+                0 0 3px rgba(0,0,0,0.2);
+}
+
+switch:disabled {
+    opacity: 0.45;
+}
+
+notebook,
+notebook tab {
+    font-weight: normal;
+    color: black;
+    
+/* barra de pestañas */
+notebook header,
+.notebook header {
+    background-color: transparent;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+/* pestaña inactiva */
+notebook tab,
+.notebook tab {
+    background-color: rgba(255,255,255,0.85);
+    border: 1px solid rgba(0,0,0,0.08);
+    border-bottom: none;
+    padding: 6px 10px;
+    margin-right: 2px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+/* pestaña activa */
+notebook tab:checked,
+.notebook tab:checked {
+    background-image: linear-gradient(to bottom, @win-accent-light, @win-accent);
+    color: white;
+    border-color: @win-accent-dark;
+    box-shadow: inset 0 1px rgba(255,255,255,0.2);
+    }
+    
+    frame.border-inset {
+      box-shadow:
+        0 0 0 12px white,
+        0 0 0 20px rgba(0,0,0,0.15),
+        0 0 24px rgba(0,0,0,0.35);
+
+    border-radius: 10px;
+
+    /* Reflejo Aero */
+    background-image: url("assets/window/DWMWindow_ReflectionsImage.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+
+    /* No mezclar fondo con contenido interno */
+    background-clip: padding-box;
+}
+
+/* ---------------- Menú Popup / Popover (GTK3) - Estilo Aero ---------------- */
+
+/* Contenedor del menú (popup) */
+.menu, .popup-menu, .gtk-menu, .gtk-popover {
+    background-color: rgba(30, 30, 30, 0.22); /* translucidez base */
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 10px;
+    padding: 6px;
+    min-width: 220px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+}
+
+/* Fondo translúcido más claro para submenús */
+.menu .menu, .popup-menu .menu {
+    background-color: rgba(30, 30, 30, 0.18);
+}
+
+/* Si quieres usar una textura de vidrio (imagen), descomenta y ajusta ruta */
+/*
+.menu {
+    background-image: url("assets/glass_texture.png");
+    background-size: cover;
+}
+*/
+
+/* Entrada de menú (texto + icono) */
+.menuitem, .menu-item {
+    padding: 6px 10px;
+    border-radius: 6px;
+    color: white;
+    font-family: "Segoe UI", "Noto Sans", sans-serif;
+    font-size: 11pt;
+}
+
+/* Hover / selección */
+.menuitem:hover, .menuitem:active, .menu-item:hover, .menu-item:selected {
+    background-color: rgba(255,255,255,0.08); /* leve brillo al pasar */
+    color: #ffffff;
+}
+
+/* Iconos en items */
+.menuitem image, .menu-item image, .menuitem icon, .menu-item icon {
+    margin-right: 8px;
+    opacity: 0.95;
+    vertical-align: middle;
+}
+
+/* Check / radio (marcadores) */
+.menuitem .image, .menu-item .image {
+    margin-left: 6px;
+}
+
+/* Separador */
+.separator, .menu-separator {
+    margin: 6px 0;
+    border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Cabecera de grupo (opcional) */
+.menu-label, .menu-heading {
+    color: rgba(255,255,255,0.90);
+    font-weight: 600;
+    padding: 6px 10px;
+    font-size: 10pt;
+}
+
+/* Tooltip / submenu arrow */
+.menu > .dropdown, .popup-menu .arrow {
+    /* se mantiene por si el tema usa arrow */
+}
+
+/* Menú contextual (context menu) */
+.context-menu, .gtk-menu {
+    /* hereda del .menu, pero aseguramos borde redondeado */
+    border-radius: 8px;
+}
+
+/* Forzar transparencia en ventanas de popup (si el compositor lo respeta) */
+.menu, .popup-menu {
+    background: rgba(30,30,30,0.18);
+}
+
+/* versión "más brillante" tipo Aero (opcional) */
+.menu.aero {
+    background-color: rgba(240, 248, 255, 0.06); /* azul muy sutil */
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 8px 30px rgba(10,10,10,0.48);
+}
+
+/* Optimización en pantallas pequeñas */
+@media (max-width: 800px) {
+    .menu { min-width: 160px; }
+    .menuitem { font-size: 10pt; }
+}
+

@@ -1,35 +1,82 @@
 progressbar {
-    padding: 1px;
-      min-height: 14px;
          background-color: white;
 
 }
+
 progressbar trough {
     border-radius: 3px;
     border: 1px solid #9db6cc;
     background: #e9f1fb;
-    min-height: 16px;
+    border-image-slice: 9 9 7 6 fill;
+    padding: 5px;
 }
 
 progressbar progress {
+    border-radius: 3px;
     background-image: linear-gradient(
-        to right,
+        to bottom,
         #8aee8a,
         #4db84d
     );
-    min-height: 16px;
+    color: #4db84d;
+    padding: 5px;
+    border-image-slice: 25 25 7 6 fill;
 }
 
 progressbar progress {
     animation: progress_move 5s linear infinite;
     background-size: 14px 100%;
-    badckground-repeat: no-repeat; */
-    background-color:transparent;
+    background-color:linear-gradient(
+        to top,
+        #8aee8a,
+        #4db84d;
     min-width: 14px;
+    padding: 0px 0px 6px 5px;
+    color:#4db84d;
 }
 
+progressbar.vertical trough {
+    border-radius: 3px;
+    border: 1px solid #9db6cc;
+    background: #e9f1fb;
+}
+
+progressbar progress:vertical {
+    animation: progress_move 5s linear infinite;
+    background-size: 12px 100%;
+    background-color:transparent;
+    min-width: 1px;
+    padding: 6 5 0 0 fill;
+}
 @keyframes progress_move {
     from { background-position: 0 0; }
     to   { background-position: 100px 0; }
 }
 
+levelbar levelbar{
+ background-color: linear-gradient(
+        to right,
+        #8aee8a,
+        #4db84d
+    );
+}
+
+box label {  
+  background-color: linear-gradient(
+        to right,
+        #8aee8a,
+        #4db84d
+    );
+}  
+
+progressbar-left {
+border-radius: 3px;
+    background-image: linear-gradient(
+        to bottom,
+        #8aee8a,
+        #4db84d
+    );
+    color: #4db84d;
+    padding: 5px;
+    border-image-slice: 25 25 7 6 fill;
+}
