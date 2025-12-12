@@ -1,4 +1,4 @@
-/* Barra superior con overlays reales */
+/* WindowCaption */
 headerbar {
     background-image: linear-gradient(
         rgba(255,255,255,0.30),
@@ -18,7 +18,7 @@ headerbar .title,
     text-shadow: 0 1px 2px rgba(0,0,0,0.65);
 }
 
-/* Ventana inactiva */
+/* Window Inactive */
 window:backdrop headerbar {
     background-image: linear-gradient(
         rgba(255,255,255,0.00),
@@ -33,14 +33,14 @@ window:backdrop headerbar {
 }
 }
 
-/* Reflejos laterales simulados */
+/* Shadows */
 window > box {
     box-shadow:
         inset 12px 0 0 rgba(255,255,255,0.04),
         inset -12px 0 0 rgba(255,255,255,0.04),
         inset 0 -12px 0 rgba(255,255,255,0.04);
 }
-
+/* WindowActive*/
 header:active {
     background-position: left top, right top, left top;
     background-size: auto, auto, contain;
