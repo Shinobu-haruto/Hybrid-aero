@@ -42,7 +42,6 @@ window > box {
 }
 
 header:active {
-    background-image:url("assets/window/DWMWindow_FrameTop_ActiveImage.png");
     background-position: left top, right top, left top;
     background-size: auto, auto, contain;
     border-bottom: 1px solid rgba(255,255,255,0.35);
@@ -52,7 +51,6 @@ header:active {
 menubar.menubar {
  -GtkWidget-window-dragging: true;
   padding: 0;
-  background-image:url("assets/window/Default__Rebar_BackgroundImage.png);
     background-position: left top, right top, left top;
     background-size: auto, auto, contain;
     border-bottom: 1px solid rgba(255,255,255,0.35);
