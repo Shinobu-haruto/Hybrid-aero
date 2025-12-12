@@ -1,20 +1,36 @@
-/* Caption Active*/
+/* Barra superior con overlays reales */
 headerbar {
-    min-height: 32px;
-    background-color: rgba(255,255,255,0.5);
-    background-image:
-        url("assets/window/DWMWindow_FrameTopDesignLeft_ActiveImage");
-    background-repeat: no-repeat, no-repeat, repeat-x;
-    background-position: left top, right top, left top;
-    background-size: auto, auto, contain;
-    margin-top: 397, 0, 1199, 604;
-    border-bottom: 1px solid rgba(255,255,255,0.35);
-    margin: 9, 0, 0, 0;
+    background-image: linear-gradient(
+        rgba(255,255,255,0.30),
+        rgba(255,255,255,0.10)
+    ),
+    linear-gradient(
+        rgba(255,255,255,0.15),
+        rgba(255,255,255,0.05)
+    );
+    background-color: rgba(255,255,255,0.08); /* efecto translúcido */
+    border-bottom: 1px solid rgba(255,255,255,0.20);
 }
 
-/* Caption Inactive */
+headerbar .title,
+.titlebar .title {
+    color: #ffffff; /* color del título */
+    text-shadow: 0 1px 2px rgba(0,0,0,0.65);
+}
+
+/* Ventana inactiva */
 window:backdrop headerbar {
-    background-image: rgba(255, 255, 255, 0.7);
+    background-image: linear-gradient(
+        rgba(255,255,255,0.00),
+        rgba(255,255,255,0.10)
+    ),
+    linear-gradient(
+        rgba(255,255,255,0.15),
+        rgba(255,255,255,0.05)
+    );
+    background-color: rgba(255,255,255,0.08); /* efecto translúcido */
+    border-bottom: 1px solid rgba(255,255,255,0.20);
+}
 }
 
 /* Reflejos laterales simulados */

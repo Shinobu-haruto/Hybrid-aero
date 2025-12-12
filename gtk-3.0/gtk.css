@@ -1,11 +1,11 @@
-/* Se requiere Parchar la transparencia con herramientas linux */
+/* Linux–Windows Style Wrapper (LSW) */
 @import url("resource:///org/gtk/libgtk/theme/Adwaita/gtk.css");
 :root {
   --accent: #0078D7;
   --bg: #121212;
   --fg: #ffffff;
   /* ==============================
-    Fonts Base
+   Windows 7 Fonts (Segoe UI port)
    ============================== */
 
 * {
@@ -26,5 +26,5 @@
 @import url("nemo.css");
 @import url("pathbar.css");
 @import url("progressbar.css");
-@import url("window-controls.csss");
+@import url("window-controls.css");
 
