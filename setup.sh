@@ -9,3 +9,5 @@ cp ./ $HOME$/.local/shared/themes/HybridAero
 echo  "Parch..."
 sudo apt install picom
 cp ./parch/picom.conf $HOME$/.local/shared/
+echo "Please wait close session"
+exit
