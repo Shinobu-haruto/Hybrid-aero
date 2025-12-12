@@ -47,10 +47,6 @@ HybridAero/
 ```
 
 ---
-
-## 🖼️ Capturas
-*(Agrega aquí screenshots del tema aplicado)*
-
 ---
 
 ## 🎨 Colores principales
