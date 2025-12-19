@@ -1,28 +1,22 @@
-button {
-    border-radius: 4px;
-    border: 1px solid @win7_button_border;
+button button:label text-button {
+    border-radius: 2px;
+    border: 1px solid #9db6cc;
     padding: 4px 10px;
     background-image: linear-gradient(
-        to bottom,
-        @win7_button_top,
-        @win7_button_mid 50%,
-        @win7_button_bottom
-    );
+        to bottom, #ededed, #d4d4d4);
     color: #1a1a1a;
+    min-height: 23px;
 }
 button:hover {
     background-image: linear-gradient(
-        to bottom,
-        white,
-        @win7_button_hover
-    );
+        to bottom, #ededed, #d4d4d4);
+        min-height: 23px;
 }
 button:active {
     background-image: linear-gradient(
-        to bottom,
-        @win7_button_pressed,
-        @win7_button_mid
+        to bottom, #d3ecf9, #7fc2e5);
     );
-    border-color: darken(@win7_button_border, 10%);
+    min-height: 23px;
+    border-color: #68b3db;
 }
 

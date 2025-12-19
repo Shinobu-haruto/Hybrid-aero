@@ -1,17 +1,13 @@
-.background {
-   background-color: white;
-   color:black;
-   }
 /* Barra superior con overlays reales */
 headerbar {
     background-image: linear-gradient(
-        rgba(255,255,255,0.30),
+        rgba(255,255,255,0.70),
         rgba(255,255,255,0.10)
     ),
     linear-gradient(
         rgba(255,255,255,0.15),
         rgba(255,255,255,0.05)
-    );
+    ), url ("assets/blur.png");
     background-color: rgba(255,255,255,0.08); /* efecto translúcido */
     border-bottom: 1px solid rgba(255,255,255,0.20);
 }
@@ -20,6 +16,8 @@ headerbar .title,
 .titlebar .title {
     color: #ffffff; /* color del título */
     text-shadow: 0 1px 2px rgba(0,0,0,0.65);
+    box-shadow: inset 0 -1px rgba(255,255,255,0.08);
+    border-color: black;
 }
 
 /* Ventana inactiva */

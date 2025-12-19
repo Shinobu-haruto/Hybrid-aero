@@ -10,7 +10,7 @@
    ======================================== */
 
 NemoWindow {
-    background-color: transparent;
+    background-color: rba(255,255,255,0.7);
 
     /* Marco estilo Windows 7 */
     box-shadow:
@@ -21,7 +21,6 @@ NemoWindow {
     border-radius: 10px;
 
     /* Reflejo Aero */
-    background-image: url("assets/window/DWMWindow_ReflectionsImage.png");
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
@@ -46,14 +45,16 @@ NemoWindow .frame {
 }
 
 .titlebutton.minimize {
-    background-image: url("../assets/win7-minimize.png");
+    background-image: black ;
+    box-shadow: inset 0 -1px rgba(255,255,255,0.08);
 }
 .titlebutton.maximize {
-    background-image: url("../assets/win7-maximize.png");
+    background-image: black ;
+    box-shadow: inset 0 -1px rgba(255,255,255,0.08);
 }
 .titlebutton.close {
-    background: url("assets/window/DWMWindow_CloseButtonGlowImage.png");
-    background-image: url("../assets/win7-close.png");
+    background-image: black;
+    box-shadow: inset 0 -1px rgba(255,255,255,0.08);
 }
 
 checkbutton {
@@ -185,6 +186,7 @@ switch:disabled {
 
 notebook,
 notebook tab {
+    background-color: #f2f2f2;
     font-weight: normal;
     color: black;
     
@@ -329,3 +331,11 @@ notebook tab:checked,
     .menuitem { font-size: 10pt; }
 }
 
+header {
+  background-color: #f6f7f9;
+  }
+  
+  frame.border-inset:dir border label {
+      background-color: rgba(0, 0 ,0 ,0 ,0.5);
+      
+      }

@@ -1,10 +1,12 @@
 progressbar {
-         background-color: white;
+         background-color: transparent;
+         min-width: 14px;
+         min-height: 19px;
 
 }
 
 progressbar trough {
-    border-radius: 3px;
+    border-radius: 2px;
     border: 1px solid #9db6cc;
     background: #e9f1fb;
     border-image-slice: 9 9 7 6 fill;
@@ -12,22 +14,23 @@ progressbar trough {
 }
 
 progressbar progress {
-    border-radius: 3px;
-    background-image: linear-gradient(
-        to bottom,
-        #8aee8a,
-        #4db84d
+    border-radius: 1px;
+    background-image: linear-gradient(to bottom, #00aaff, #00aaff, #0082c3, #0075b0);
     );
-    color: #4db84d;
-    padding: 5px;
-    border-image-slice: 25 25 7 6 fill;
+          color: #4db84d;
+            padding: 5px;
+              border-image-slice: 25 25 7 6 fill;
+                 border-color:#9db6cc;
+                  background-color: linear-gradient(to center, white);
+                      min-width: 14px;
+         min-height: 19px;
 }
 
 progressbar progress {
     animation: progress_move 5s linear infinite;
-    background-size: 14px 100%;
+    background-size: 100% 100%;
     background-color:linear-gradient(
-        to top,
+        to right,
         #8aee8a,
         #4db84d;
     min-width: 14px;
@@ -38,10 +41,11 @@ progressbar progress {
 progressbar.vertical trough {
     border-radius: 3px;
     border: 1px solid #9db6cc;
-    background: #e9f1fb;
+    background-image: linear-gradient(to bottom, #00aaff, #00aaff, #0082c3, #0075b0);
+    );
 }
 
-progressbar progress:vertical {
+progressbar progress.vertical {
     animation: progress_move 5s linear infinite;
     background-size: 12px 100%;
     background-color:transparent;
@@ -53,11 +57,10 @@ progressbar progress:vertical {
     to   { background-position: 100px 0; }
 }
 
-levelbar levelbar{
- background-color: linear-gradient(
-        to right,
-        #8aee8a,
-        #4db84d
+levelbar {
+ min-width: 14px;
+         min-height: 19px;
+ background-color: linear-gradient(to bottom, #00aaff, #00aaff, #0082c3, #0075b0);
     );
 }
 

@@ -1,184 +1,113 @@
+stage {
+  color: #79d2ff; }
+
+.label-shadow {
+  color: rgba(0, 0, 0, 0); }
+
 /* ===============================
    Windows Accent - Cinnamon Panel
    =============================== */
 
-@define-color win-accent #4fa9ff;
-@define-color win-accent-dark #2b78ff;
-@define-color win-accent-light #9fd0ff;
+/* ================= Panel Aero Glass ================= */
 
-/* Panel principal */
-#panel {
-    background-color: rgba(255, 255, 255, 0.4);
-    background-gradient-direction: vertical;
-    background-gradient-start: @win-accent-light;
-    background-gradient-end: @win-accent-dark;
-    box-shadow: inset 0 1px rgba(255,255,255,0.4);
-    height: 32px;
+.panel {
+    background-color: rgba(255,255,255,0.08); /* leve translucidez */
+    border: none;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.25);
 }
 
-
-.panel .applet-box:hover {
-  background-color: mix(@accent_color, transparent, 0.12);
-  border-radius: 4px;
+.panel .panel-top,
+.panel .panel-bottom {
+    background-color: rgba(255,255,255,0.08);
 }
 
-/* Applets en el panel */
+.panel *,
+.panel .applet-label {
+    color: white;
+    text-shadow:
+        0px 1px 2px rgba(0,0,0,0.85),
+        0px 0px 4px rgba(0,0,0,0.45);
+}
+
+/* ================= Applets ================= */
+
 .panel-button {
     color: white;
     border-radius: 0;
     padding: 4px 8px;
 }
 
-/* Hover estilo Aero */
 .panel-button:hover {
     background-color: rgba(255,255,255,0.15);
 }
 
-/* Applet activo */
 .panel-button:active {
     background-color: rgba(0,0,0,0.15);
 }
 
-.menu-item:hover, .menu-item:selected {
-  background-color: @accent_color;
+/* ================= Hover menú ================= */
+.menu-item:hover,
+.menu-item:selected {
+  background-color: rgba(30,144,255,0.6); /* reemplazo de @accent_color */
   color: #ffffff;
 }
 
-/* Clock styling */
-#calendar-desktop-label, .panel .applet .label.time {
+/* ================= Clock ================= */
+
+#calendar-desktop-label,
+.panel .applet .label.time {
   font-family: "Segoe UI", "Noto Sans", sans-serif;
   font-size: 12pt;
   font-weight: 600;
-  color: @panel_text;
+  color: white; /* reemplazo de @panel_text */
 }
-#calendar-desktop-label .date, .panel .applet .label.date {
+
+#calendar-desktop-label .date,
+.panel .applet .label.date {
   font-size: 9pt;
   font-weight: 400;
   color: rgba(255,255,255,0.85);
 }
 
-/* ---------------- Menú Principal estilo Windows 7 ---------------- */
-.menu {
-    background-color: rgba(40, 40, 40, 0.25);
-    backdrop-filter: blur(18px);
+/* ================ Menú principal estilo Windows 7 ================ */
+
+.menu,
+.popup-menu,
+.popup-combo-menu {
+    background-color: rgba(40, 40, 40, 0.7);
     border: 1px solid rgba(255, 255, 255, 0.45);
     border-radius: 10px;
     padding: 6px;
-    background-image: url("assets/UI/StartPanelComposited__StartPanel_ProgramsListImage.png"),
+    background-size: cover;
 }
 
-/* ---------------- Lista de ventanas estilo Aero ---------------- */
-..window-list-item-box {
+/* ================= Window List (Lista de ventanas) ================= */
+
+.window-list-item-box {
     background-color: transparent;
     border: 1px solid transparent;
 }
 
-/* Ventana activa */
 .window-list-item-box:focus {
     background-color: rgba(255,255,255,0.25);
     border: 1px solid rgba(255,255,255,0.4);
 }
 
-/* Hover */
 .window-list-item-box:hover {
     background-color: rgba(255,255,255,0.15);
 }
 
+/* ================= Calendario ================= */
 
-/* ---------------- Calendario estilo Aero ---------------- */
 .popup-calendar {
     background-color: rgba(50, 50, 50, 0.25);
-    backdrop-filter: blur(15px);
     border-radius: 10px;
     border: 1px solid rgba(255,255,255,0.40);
 }
 
-/* ---------------- Applets del panel ---------------- */
+/* ================= Applet Box ================= */
+
 .applet-box {
     background: rgba(255,255,255,0.10);
-    border: 1px solid rgba(255,255,255,0.30);
-    border-radius: 4px;
-    padding: 4px 6px;
-}
+    border: 1px solid rgba(255,
 
-.applet-box:hover {
-    background: rgba(255,255,255,0.20);
-}
-
-/* ========================================
-   DWM Aero Glass - Marco real de Windows 7
-   ======================================== */
-
-.window-frame {
-    border-radius: 8px;
-    background-color: rgba(25, 25, 25, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    position: relative;
-    padding: 32px 6px 6px 6px;
-}
-
-/* ---------- Reflejo superior ----------- */
-.window-frame::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 38px;
-
-    background-image: url("assets/DWMWindow_Reflections_TopImage.png");
-    background-repeat: repeat-x;
-    background-size: contain;
-
-    opacity: 0.85;
-    pointer-events: none;
-}
-
-/* ---------- Reflejo izquierdo ---------- */
-.window-frame::after {
-    content: "";
-    position: absolute;
-    top: 36px;
-    left: 0;
-    bottom: 10px;
-    width: 20px;
-
-    background-image: url("assets/DWMWindow_Reflections_LeftImage.png");
-    background-repeat: repeat-y;
-    background-size: contain;
-
-    opacity: 0.75;
-    pointer-events: none;
-}
-
-/* ---------- Reflejo derecho ----------- */
-.window-frame > .right-reflection {
-    position: absolute;
-    top: 36px;
-    right: 0;
-    bottom: 10px;
-    width: 20px;
-
-    background-image: url("assets/DWMWindow_Reflections_RightImage.png");
-    background-repeat: repeat-y;
-    background-size: contain;
-
-    opacity: 0.75;
-    pointer-events: none;
-}
-
-/* ---------- Reflejo inferior ---------- */
-.window-frame > .bottom-reflection {
-    position: absolute;
-    left: 10px;
-    right: 10px;
-    bottom: 0;
-    height: 22px;
-    background-image: url("assets/DWMWindow_Reflections_BottomImage.png");
-    background-repeat: repeat-x;
-    background-size: contain;
-
-    opacity: 0.75;
-    pointer-events: none;
-}
- 
