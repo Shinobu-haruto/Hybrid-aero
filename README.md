@@ -51,13 +51,17 @@ HybridAero/
 ---
 
 ## 🎨 Colores principales
-- **Aero Green** `#52D763`
 - **Aero Blue** `#7FC7FF`
 - **Shadow Gray** `#6E6E6E`
 - **Highlight Light** `#F0F8FF`
 
 ---
-
+## 🎨 Colores Modo Oscuro
+@define-color bg_color      #121212;
+@define-color fg_color      #e5e7eb;
+@define-color accent_color #4da3ff; /* azul Aero */
+@define-color glow_color   #7fc8ff;
+@define-color border_color #2a2d35;
 ## ⚙️ Instalación
 ```
 mkdir -p ~/.themes
