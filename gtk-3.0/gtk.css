@@ -3,7 +3,10 @@
   --accent: #0078D7;
   --bg: #f3f4f6;
   --fg: #111827;
- 
+  /* ==============================
+   Windows 7 Fonts (Segoe UI port)
+   ============================== */
+
 * {
     font-family: "Segoe UI", "Cantarell", sans-serif;
     font-size: 9pt;
