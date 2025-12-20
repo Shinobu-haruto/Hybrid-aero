@@ -1,3 +1,26 @@
+* {
+  background-clip: padding-box;
+  -GtkToolButton-icon-spacing: 0;
+  -GtkTextView-error-underline-color: #D93025;
+  -GtkScrolledWindow-scrollbar-spacing: 0;
+  -GtkToolItemGroup-expander-size: 11;
+  -GtkWidget-text-handle-width: 24;
+  -GtkWidget-text-handle-height: 24;
+  -GtkDialog-button-spacing: 6;
+  -GtkDialog-action-area-border: 6;
+  outline-style: solid;
+  outline-width: 2px;
+  outline-color: transparent;
+  outline-offset: -4px;
+  -gtk-outline-radius: 2px;
+  -gtk-secondary-caret-color: #1A73E8;
+}
+
+*:focus {
+  outline-color: alpha(currentColor, 0.1);
+}
+
+
 /* ==========================================================
    DWM Reflection alrededor con borde blanco (GTK 3)
    ========================================================== */
@@ -38,7 +61,7 @@ NemoWindow .frame {
 }
 
 
-.titlebutton {
+/* .titlebutton {
     border-radius: 0;
     background-repeat: no-repeat;
     background-position: center;
@@ -55,6 +78,37 @@ NemoWindow .frame {
 .titlebutton.close {
     background-image: black;
     box-shadow: inset 0 -1px rgba(255,255,255,0.08);
+}
+*/
+
+/* ======================================================================= */
+headerbar button.titlebutton {
+  min-width: 28px;
+  min-height: 28px;
+
+  background-color: rgba(255,255,255,0.08); /* respaldo */
+  border-radius: 4px;
+
+  border: none;
+  box-shadow: none;
+}
+
+headerbar button.titlebutton.close::after {
+  content: "✕";
+  font-size: 14px;
+  color: #ffffff;
+}
+
+headerbar button.titlebutton.minimize::after {
+  content: "—";
+  font-size: 14px;
+  color: #ffffff;
+}
+
+headerbar button.titlebutton.maximize::after {
+  content: "▢";
+  font-size: 12px;
+  color: #ffffff;
 }
 
 checkbutton {
