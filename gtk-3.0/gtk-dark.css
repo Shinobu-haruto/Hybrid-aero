@@ -1,0 +1,14 @@
+/* Dark Mode Colors */
+@define-color bg_color      #121212;
+@define-color fg_color      #e5e7eb;
+@define-color accent_color #4da3ff; /* azul Aero */
+@define-color glow_color   #7fc8ff;
+@define-color border_color #2a2d35;
+
+
+ /* UI */
+@import url("dark-mode/window.css");
+
+/*Applications*/
+@import url("dark-mode/apps/nemo.css");
+

@@ -1,0 +1,14 @@
+.nemo-window .sidebar {
+  background-color: #edf3fa;
+  border-right: 1px solid #9db6cc;
+}
+
+.nemo-window .sidebar row:selected {
+  background-image: linear-gradient(
+    to bottom,
+    #7fd2ff,
+    #00aaff
+  );
+  color: white;
+}
+

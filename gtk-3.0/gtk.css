@@ -28,3 +28,5 @@
 @import url("progressbar.css");
 @import url("window-controls.css");
 
+/* Dark Mode */
+@import url("gtk-dark.css");

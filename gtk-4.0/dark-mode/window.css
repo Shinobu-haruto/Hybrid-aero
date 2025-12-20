@@ -1,0 +1,14 @@
+  .background {
+   background-color: @bg_color;
+   color: @fg_color;
+   }
+   
+   window {
+   background-color: @bg_color;
+   color: @fg_color;
+   }
+   
+   .textview {
+   background-color: @bg_color;
+   color: @fg_color;
+   }
