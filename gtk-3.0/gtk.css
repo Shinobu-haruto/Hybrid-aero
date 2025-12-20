@@ -1,21 +1,29 @@
-/* Linux–Windows Style Wrapper (LSW) */
 @import url("resource:///org/gtk/libgtk/theme/Adwaita/gtk.css");
 :root {
   --accent: #0078D7;
-  --bg: #121212;
-  --fg: #ffffff;
-  /* ==============================
-   Windows 7 Fonts (Segoe UI port)
-   ============================== */
-
+  --bg: #f3f4f6;
+  --fg: #111827;
+ 
 * {
     font-family: "Segoe UI", "Cantarell", sans-serif;
     font-size: 9pt;
 }
+/*  Light Mode Colors  */
+@define-color bg_color        #f3f4f6;  /* fondo principal */
+@define-color surface_color   #ffffff;  /* ventanas / tarjetas */
+@define-color fg_color        #111827;  /* texto principal */
+@define-color fg_muted        #4b5563;  /* texto secundario */
+@define-color accent_color    #3b82f6;  /* azul moderno */
+@define-color border_color    #d1d5db;  /* bordes suaves */
+@define-color hover_color     rgba(59,130,246,0.08);
+@define-color active_color    rgba(59,130,246,0.16);
 
-@define-color aero-accent-bg #ffffff;
-@define-color win-accent-dark #2b78ff;
-@define-color win-accent-light #9fd0ff;
+/* Dark Mode Colors */
+@define-color bg_color_dark      #121212;
+@define-color fg_color      #e5e7eb;
+@define-color accent_color #4da3ff; /* azul Aero */
+@define-color glow_color   #7fc8ff;
+@define-color border_color #2a2d35;
 
 }
 @import url("colors.css");
@@ -27,6 +35,4 @@
 @import url("pathbar.css");
 @import url("progressbar.css");
 @import url("window-controls.css");
-
-/* Dark Mode */
-@import url("gtk-dark.css");
+@import url("dark-mode.css");
