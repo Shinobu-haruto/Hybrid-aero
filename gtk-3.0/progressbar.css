@@ -1,3 +1,8 @@
+/* =========================
+   AERO + LINUX PROGRESSBAR
+   LIGHT MODE – GTK 3 / NEMO
+   ========================= */
+
 /* Base */
 progressbar {
   background-color: transparent;
@@ -14,7 +19,7 @@ progressbar trough {
     #f6fbff,
     #e9f1fb
   );
-  padding: 1px;
+  padding: 3px;
 }
 
 /* ---------- PROGRESS (barra Aero) ---------- */
@@ -32,7 +37,6 @@ progressbar progress {
     0 0 3px rgba(0,170,255,0.6);
   animation: progress_move 5s linear infinite;
   background-size: 200% 100%;
-  padding: 1px;
 }
 
 /* ---------- VERTICAL ---------- */
