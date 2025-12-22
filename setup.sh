@@ -10,7 +10,10 @@ set -e
 
 THEME_NAME="HybridAero"
 THEME_DIR="$HOME/.themes/$THEME_NAME"
+PICOM_CONF="$HOME/.config/picom/picom.conf"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+ACTION="${1:-install}"
 
 clear
 echo "========================================="
@@ -20,7 +23,52 @@ echo "========================================="
 echo
 
 # ---------------------------------------------------------
-# Environment detection
+# Uninstall mode
+# ---------------------------------------------------------
+
+if [[ "$ACTION" == "--uninstall" ]]; then
+    echo "Uninstall mode selected"
+    echo
+
+    read -rp "Remove HybridAero theme and patches? [y/N]: " CONFIRM
+    CONFIRM=${CONFIRM:-N}
+
+    if [[ ! "$CONFIRM" =~ ^[Yy]$ ]]; then
+        echo "Uninstall cancelled."
+        exit 0
+    fi
+
+    echo
+    echo "[1/2] Removing HybridAero theme..."
+
+    if [[ -d "$THEME_DIR" ]]; then
+        rm -rf "$THEME_DIR"
+        echo "✔ Theme removed"
+    else
+        echo "Theme not found, skipping"
+    fi
+
+    echo
+    echo "[2/2] Removing HybridAero Picom patch..."
+
+    if [[ -f "$PICOM_CONF" ]]; then
+        rm -f "$PICOM_CONF"
+        echo "✔ Picom configuration removed"
+    else
+        echo "Picom patch not found, skipping"
+    fi
+
+    echo
+    echo "========================================="
+    echo " HybridAero successfully removed"
+    echo "========================================="
+    echo
+    echo "A session restart is recommended."
+    exit 0
+fi
+
+# ---------------------------------------------------------
+# Install mode
 # ---------------------------------------------------------
 
 DESKTOP_SESSION_NAME="${XDG_CURRENT_DESKTOP:-Unknown}"
@@ -103,8 +151,7 @@ if $PICOM_INSTALLED; then
     echo "[3/4] Applying HybridAero composition patch..."
 
     mkdir -p "$HOME/.config/picom"
-    cp "$THEME_DIR/gtk-3.0/patch/picom.conf" \
-       "$HOME/.config/picom/picom.conf"
+    cp "$THEME_DIR/gtk-3.0/patch/picom.conf" "$PICOM_CONF"
 
     echo "✔ Picom configuration applied"
 fi
@@ -113,6 +160,8 @@ fi
 # Final status
 # ---------------------------------------------------------
 
+echo
+echo "[4/4] Finalizing setup..."
 echo
 echo "========================================="
 echo " HybridAero installation completed"
