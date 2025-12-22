@@ -1,0 +1,7 @@
+scrollbar slider {
+    background: linear-gradient(to bottom, #f5f9fc, #dbe7f4);
+    border: 1px solid #9db6cc;
+    border-radius: 3px;
+    min-width: 14px;
+}
+

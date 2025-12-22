@@ -1,0 +1,15 @@
+spinner {
+    min-width: 16px;
+    min-height: 16px;
+    animation: win7_spinner 1s linear infinite;
+}
+
+@keyframes win7_spinner {
+    0% { -gtk-icon-transform: rotate(0deg); }
+    100% { -gtk-icon-transform: rotate(360deg); }
+}
+
+spinner:checked {
+    color: #4b8ad1; /* azul Win7 */
+}
+

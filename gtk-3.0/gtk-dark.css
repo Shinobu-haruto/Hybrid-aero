@@ -1,14 +1,26 @@
-/* Dark Mode Colors */
-@define-color bg_color      #121212;
-@define-color fg_color      #e5e7eb;
-@define-color accent_color #4da3ff; /* azul Aero */
-@define-color glow_color   #7fc8ff;
-@define-color border_color #2a2d35;
+
+@import url("resource:///org/gtk/libgtk/theme/Adwaita/gtk.css");
+/* SYSTEM CONFIG */
+@import url("SYSTEM/font.cfg");
+@import url("SYSTEM/Color-scheme.cfg");
+@import url("SYSTEM/DWM.cfg");
 
 
- /* UI */
-@import url("dark-mode/window.css");
-
-/*Applications*/
-@import url("dark-mode/apps/nemo.css");
-
+/*   Controls */
+@import url("dark-mode/UI/controls/buttons/pushbutton.css");
+@import url("dark-mode/UI/controls/Trackbar/thumb.css");
+@import url("dark-mode/UI/controls/progress-bars/progressbar.css");
+@import url("dark-mode/UI/controls/Scroll/scroll.css");
+@import url("dark-mode/UI/controls/Checkbox/checkbox.css");
+@import url("dark-mode/UI/controls/Spin/spinner.css");
+@import url("dark-mode/UI/controls/switch/switch.css");
+/* Explorer */
+@import url("dark-mode/UI/window/window.css");
+@import url("dark-mode/UI/window/caption_active.css");
+@import url("dark-mode/UI/window/Caption_inactive.css");
+@import url("dark-mode/UI/Explorer/tabs/tabitem.css");
+@import url("dark-mode/UI/window/caption.css");
+/* Apps */
+@import url("toolbar.css");
+@import url("nemo.css");
+@import url("window-controls.css");

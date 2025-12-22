@@ -1,0 +1,17 @@
+checkbutton {
+    padding: 4px;
+}
+
+checkbutton > check {
+    border-radius: 3px;
+    border: 1px solid #7b9ebd;
+    background: linear-gradient(to bottom, #ffffff, #e8f1fb);
+    min-width: 14px;
+    min-height: 14px;
+}
+
+checkbutton:checked > check {
+    background: linear-gradient(to bottom, #d9ecff, #a4c9f6);
+    border-color: #4b8ad1;
+    color: #0a4ea3;
+}

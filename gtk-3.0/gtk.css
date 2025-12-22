@@ -1,41 +1,28 @@
 @import url("resource:///org/gtk/libgtk/theme/Adwaita/gtk.css");
-:root {
-  --accent: #0078D7;
-  --bg: #f3f4f6;
-  --fg: #111827;
-  /* ==============================
-   Windows 7 Fonts (Segoe UI port)
-   ============================== */
+/* SYSTEM CONFIG */
+@import url("SYSTEM/font.cfg");
+@import url("SYSTEM/Color-scheme.cfg");
+@import url("SYSTEM/DWM.cfg");
 
-* {
-    font-family: "Segoe UI", "Cantarell", sans-serif;
-    font-size: 9pt;
-}
-/*  Light Mode Colors  */
-@define-color bg_color        #f3f4f6;  /* fondo principal */
-@define-color surface_color   #ffffff;  /* ventanas / tarjetas */
-@define-color fg_color        #111827;  /* texto principal */
-@define-color fg_muted        #4b5563;  /* texto secundario */
-@define-color accent_color    #3b82f6;  /* azul moderno */
-@define-color border_color    #d1d5db;  /* bordes suaves */
-@define-color hover_color     rgba(59,130,246,0.08);
-@define-color active_color    rgba(59,130,246,0.16);
 
-/* Dark Mode Colors */
-@define-color bg_color_dark      #121212;
-@define-color fg_color      #e5e7eb;
-@define-color accent_color #4da3ff; /* azul Aero */
-@define-color glow_color   #7fc8ff;
-@define-color border_color #2a2d35;
-
-}
-@import url("colors.css");
-@import url("transparencies.css");
-@import url("widgets.css");
-@import url("headerbar.css");
+/*   Controls */
+@import url("UI/controls/buttons/pushbutton.css");
+@import url("UI/controls/Trackbar/thumb.css");
+@import url("UI/controls/progress-bars/progressbar.css");
+@import url("UI/controls/Scroll/scroll.css");
+@import url("UI/controls/Checkbox/checkbox.css");
+@import url("UI/controls/Spin/spinner.css");
+@import url("UI/controls/switch/switch.css");
+/* Explorer */
+@import url("UI/window/caption_active.css");
+@import url("UI/window/Caption_inactive.css");
+@import url("UI/Explorer/tabs/tabitem.css");
+@import url("UI/window/caption.css");
+/* Apps */
 @import url("toolbar.css");
 @import url("nemo.css");
-@import url("pathbar.css");
-@import url("progressbar.css");
 @import url("window-controls.css");
-@import url("dark-mode.css");
+@import url("gtk-3.0-dark.css");
+
+/* Dark Mode */
+@import url("gtk-dark.css");
