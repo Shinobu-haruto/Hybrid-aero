@@ -41,7 +41,7 @@ notebook tab:checked,
     border-radius: 10px;
 
     /* Reflejo Aero */
-    background-image: url("assets/window/DWMWindow_ReflectionsImage.png");
+    background-image: url("SYSTEM/DWM.cfg");
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
