@@ -1,99 +1,173 @@
-# HybridAero GTK Theme (EN DESARROLLO)
+# HybridAero -- Aero Interface for GTK (EN DESARROLLO)
 
-Un tema inspirado en **Windows 7 / Vista Aero** recreado para **GTK 3, GTK 4 y Cinnamon**, utilizando recursos propios y piezas rediseñadas para evitar cualquier posible conflicto de copyright. El objetivo del proyecto es traer el estilo **Aero Glass**, sus reflejos característicos, gradientes suaves y controles inspirados en DWM, pero adaptados al ecosistema Linux.
+**HybridAero** es un proyecto de interfaz inspirado en **Windows Vista /
+7 Aero**, diseñado para recrear la sensación visual del **Desktop Window
+Manager (DWM)** dentro del ecosistema **GTK y Cinnamon**.
 
----
+No es únicamente un tema visual: HybridAero organiza su estilo como una
+**capa de composición**, separando fuente, color, controles, ventanas y
+compositor, de forma similar a cómo Windows gestionaba su interfaz a
+nivel de sistema.
+
+Todos los recursos visuales han sido recreados o rediseñados para evitar
+cualquier conflicto de copyright.
+
+------------------------------------------------------------------------
 
 ## ✨ Características principales
-- Efecto **Aero Reflections** recreado usando assets propios.
-- Botones, sliders, scrollbar y checkboxes al estilo Windows 7.
-- Progressbar animado estilo "Aero Green".
-- Headerbars con gradiente y reflejo inspirado en DWM.
-- Switches, toggles y radio buttons adaptados al estilo clásico.
-- Comboboxes y entries con borde suave estilo Vista.
-- Paleta de colores equilibrada para un look moderno pero retro.
-- Compatibilidad con Cinnamon y entornos GTK.
 
----
+-   Composición visual inspirada en **Aero Glass**.
+-   Headerbars con gradiente, reflejo y jerarquía visual tipo DWM.
+-   Botones, sliders, scrollbars y checkboxes estilo Windows 7.
+-   Progressbar verde estilo **Aero Green**.
+-   Botones de ventana personalizados (close, minimize, maximize).
+-   Separación conceptual entre sistema, controles y aplicaciones.
+-   Paleta de colores equilibrada con estética clásica.
+-   Compatibilidad con Cinnamon y aplicaciones GTK.
+
+------------------------------------------------------------------------
 
 ## 🌈 Compatibilidad
-- **GTK 3.0**
-- **GTK 4.0** (adaptado)
-- **Cinnamon** (panel, menú, applets)
 
---- Preview
-![preview_theme.png](https://github.com/Shinobu-haruto/Hybrid-aero/blob/main/preview_theme.png)">
+-   **GTK 3.0**
+-   **GTK 4.0** (adaptación en progreso)
+-   **Cinnamon** (panel, menú y applets)
 
-## 📁 Estructura del tema
-```
-HybridAero/
- ├── gtk-3.0/
- │   ├── gtk.css
- │   ├── buttons.css
- │   ├── progressbar.css
- │   ├── scrollbar.css
- │   └── assets/
- │       ├── buttons/
- │       ├── progressbar/
- │       └── window/
- │
- ├── gtk-4.0/
- │   └── (versión adaptada)
- │
- ├── cinnamon/
- │   └── (estilos para panel + menú)
- │
- ├── LICENSE
- └── README.md
-```
+------------------------------------------------------------------------
 
----
----
+## 🖼️ Vista previa
 
-## 🎨 Colores principales
-- **Aero Blue** `#7FC7FF`
-- **Shadow Gray** `#6E6E6E`
-- **Highlight Light** `#F0F8FF`
+![preview_theme.png](https://github.com/Shinobu-haruto/Hybrid-aero/blob/main/preview_theme.png)
 
----
-## 🎨 Colores Modo Oscuro
-@define-color bg_color      #121212;
-@define-color fg_color      #e5e7eb;
-@define-color accent_color #4da3ff; /* azul Aero */
-@define-color glow_color   #7fc8ff;
-@define-color border_color #2a2d35;
+------------------------------------------------------------------------
+
+## 📁 Estructura del proyecto
+
+    HybridAero/
+     ├── gtk-3.0/
+     │   ├── gtk.css
+     │   ├── SYSTEM/
+     │   │   ├── font.cfg
+     │   │   ├── Color-scheme.cfg
+     │   │   └── DWM.cfg
+     │   ├── UI/
+     │   │   ├── controls/
+     │   │   ├── window/
+     │   │   └── Explorer/
+     │   ├── assets/
+     │   └── patch/
+     │       └── picom.conf
+     │
+     ├── gtk-4.0/
+     │   └── (versión adaptada)
+     │
+     ├── cinnamon/
+     │   └── (estilos para panel y menú)
+     │
+     ├── LICENSE
+     └── README.md
+
+------------------------------------------------------------------------
+
+## 🧩 Patch Layer -- Desktop Composition
+
+El directorio `patch/` contiene configuraciones **opcionales pero
+recomendadas** que permiten una representación visual más fiel del
+estilo **Aero / DWM** cuando se utiliza HybridAero.
+
+Estos archivos **no forman parte directa del tema GTK**, sino que actúan
+como una **capa de compatibilidad de composición**, similar a cómo el
+Desktop Window Manager (DWM) trabajaba junto al sistema gráfico en
+Windows.
+
+------------------------------------------------------------------------
+
+### 🪟 picom.conf -- Composición tipo DWM
+
+El archivo `picom.conf` proporciona una configuración recomendada para
+**Picom** que complementa HybridAero con:
+
+-   Desenfoque tipo **Aero Glass** (blur suave, no acrílico moderno).
+-   Sincronización vertical para animaciones estables.
+-   Transparencias jerárquicas según el tipo de ventana.
+-   Esquinas suavemente redondeadas, al estilo Windows 7.
+
+El objetivo de este parche no es modificar el comportamiento del
+sistema, sino **alinear el compositor con la jerarquía visual y
+profundidad definidas por HybridAero**.
+
+------------------------------------------------------------------------
+
+### ⚙️ Funciones cubiertas por el parche
+
+-   Renderizado de blur en ventanas activas.
+-   Separación visual entre ventanas principales, shell y diálogos.
+-   Profundidad visual sin efectos exagerados.
+-   Apariencia consistente con el estilo DWM clásico.
+
+------------------------------------------------------------------------
+
+### ⚠️ Notas importantes
+
+-   El contenido de `patch/` es **opcional**.
+-   HybridAero funciona sin Picom, pero algunas características visuales
+    (blur y transparencias) no estarán disponibles.
+-   Los valores están ajustados para priorizar **estabilidad y fidelidad
+    visual** sobre efectos llamativos.
+-   Se recomienda utilizar Picom con backend **GLX**.
+
+------------------------------------------------------------------------
+
+### 🧠 Filosofía del parche
+
+HybridAero no intenta emular Windows a nivel funcional.
+
+El directorio `patch/` existe para reproducir la **separación de
+responsabilidades** propia del diseño de Aero:
+
+-   GTK → controles y widgets
+-   Tema → identidad visual
+-   DWM → composición de ventanas
+-   Compositor → profundidad y efectos
+
+Esta separación es intencional y forma parte del diseño del proyecto.
+
+------------------------------------------------------------------------
+
 ## ⚙️ Instalación
-```
+
+``` bash
 mkdir -p ~/.themes
 cp -r HybridAero ~/.themes/
 ```
-En Cinnamon:
-1. Abrir *Temas*.
-2. Seleccionar **HybridAero** en "Controles".
 
----
+En Cinnamon: 1. Abrir **Temas** 2. Seleccionar **HybridAero** en
+"Controles"
+
+------------------------------------------------------------------------
 
 ## 🌐 Contribuir
-Pull requests son bienvenidos. Puedes contribuir con:
-- Mejoras visuales
-- Fixes para GTK 4
-- Nuevos assets
-- Optimización de CSS
 
----
+Las contribuciones son bienvenidas, especialmente en: - Ajustes
+visuales - Compatibilidad GTK 4 - Optimización de CSS - Nuevos assets
+recreados
+
+------------------------------------------------------------------------
 
 ## 📜 Licencia
-Este proyecto es **inspirado** en Windows 7, pero **no utiliza assets originales de Microsoft**. Todos los recursos visuales han sido recreados o modificados para evitar problemas legales.
+
+Proyecto **inspirado** en Windows Aero.\
+No se utilizan assets originales de Microsoft.
 
 Licencia: **MIT**
 
----
+------------------------------------------------------------------------
 
 ## ❤️ Autor
-**Shinobu Haruto** – Ilustrador y creador del tema.
 
----
+**Shinobu Haruto**\
+Ilustrador digital y creador del proyecto.
 
-## ⭐ Si te gusta el proyecto…
-¡No olvides darle una estrella en GitHub! 🌟
+------------------------------------------------------------------------
 
+⭐ Si te gusta el proyecto, considera darle una estrella en GitHub.
