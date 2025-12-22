@@ -1,0 +1,13 @@
+/* Use Desktop Manager */
+========≠=================
+nemo-window radio:hover {
+padding: 1px ;
+min-height: 22px;
+min-with: 22px;
+background-color: @bg-color;
+border-color: @accent-color;
+}
+
+nemo-window radio:active {
+
+}
