@@ -1,7 +1,5 @@
 @import url("resource:///org/gtk/libgtk/theme/Adwaita/gtk.css");
-:root {
-  font-size: 16px;
-}
+
 /* SYSTEM CONFIG */
 @import url("SYSTEM/font.cfg");
 @import url("SYSTEM/Color-scheme.cfg");
