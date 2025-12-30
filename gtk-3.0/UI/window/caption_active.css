@@ -10,5 +10,8 @@ headerbar {
   inset 0 1px rgba(255,255,255,0.9),
   inset 0 -1px rgba(255,255,255,0.25),
   0 1px 2px rgba(0,0,0,0.08);
-
+  min-height: 24px;
+  border-color: gray;
+   text-align: center;
+   font-size: 0.75rem;
 }
