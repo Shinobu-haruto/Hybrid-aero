@@ -2,6 +2,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/Shinobu-haruto/CoreUI)](https://github.com/Shinobu-haruto/Hybrid-aero/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues/Shinobu-haruto/CoreUI)](https://github.com/Shinobu-haruto/Hybrid-aero/issues)
+
 **HybridAero** es un proyecto de interfaz inspirado en **Windows Vista /
 7 Aero**, diseñado para recrear la sensación visual del **Desktop Window
 Manager (DWM)** dentro del ecosistema **GTK y Cinnamon**.
